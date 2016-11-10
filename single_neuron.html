@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Single Neuron</title>
+  </head>
+  <body style="text-align: center">
+    <svg viewBox="0 0 100 100" style="width: 400px; display: inline-block">
+      <g id="in1" color="#e06666">
+        <line x1="20" y1="30" x2="50" y2="50"
+          stroke="currentColor" stroke-width="2" />
+        <circle cx="20" cy="30" r="5" fill="currentColor" stroke="#555" />
+      </g>
+      <g id="in2" color="#e06666">
+        <line x1="20" y1="50" x2="50" y2="50"
+          stroke="currentColor" stroke-width="2" />
+        <circle cx="20" cy="50" r="5" fill="currentColor" stroke="#555" />
+      </g>
+      <g id="in3" color="#e06666">
+        <line x1="20" y1="70" x2="50" y2="50"
+          stroke="currentColor" stroke-width="2" />
+        <circle cx="20" cy="70" r="5" fill="currentColor" stroke="#555" />
+      </g>
+
+      <line x1="50" y1="50" x2="70" y2="50" id="out"
+        stroke-width="2" stroke="#e06666" stroke-linecap="round" />
+
+      <circle cx="50" cy="50" r="10" fill="#ffd967" />
+      <g fill="#e06666" stroke="#555" stroke-width="0.5">
+        <circle cx="41.6795" cy="44.453" r="2" id="w1" />
+        <circle cx="40" cy="50" r="2" id="w2" />
+        <circle cx="41.6795" cy="55.547" r="2" id="w3" />
+      </g>
+    </svg>
+  </body>
+</html>
