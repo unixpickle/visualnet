@@ -22,6 +22,8 @@
         slider.addEventListener('input', this.updateValues.bind(this));
         var valueLabel = document.createElement('td');
         this._valueLabels[v] = valueLabel;
+        valueLabel.style.width = '45px';
+        valueLabel.style.textAlign = 'right';
         var labelColumn = document.createElement('td');
         labelColumn.textContent = v;
         var row = document.createElement('tr');
@@ -35,6 +37,13 @@
 
     App.prototype.get = function(varName) {
       return parseFloat(this._sliders[varName].value);
+    };
+
+    App.prototype.zeroAll = function() {
+      for (var i = 0, len = VAR_NAMES.length; i < len; ++i) {
+        this._sliders[VAR_NAMES[i]].value = 0;
+      }
+      this.updateValues();
     };
 
     App.prototype.updateValues = function() {
@@ -55,8 +64,14 @@
       document.getElementById('answer').textContent = output.toFixed(2);
     };
 
+    var app;
+
     function handleLoad() {
-      new App();
+      app = new App();
+    }
+
+    function zeroAll() {
+      app.zeroAll();
     }
 
     function numberColor(num) {
@@ -96,6 +111,8 @@
   </head>
 
   <body onload="handleLoad()">
+    <button onclick="zeroAll()">Zero</button>
+    <br>
     <table></table>
     <br><br>
     <label>w1*in1 + w2*in2 + w3*in3 = </label><label id="answer"></label>
