@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Single Neuron</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="../diagram.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body onload="handleLoad()">
+    <button onclick="zeroAll()">Zero</button>
+    <br>
+    <table></table>
+    <br><br>
+    <label>w1*in1 + w2*in2 + w3*in3 = </label><label id="answer"></label>
+    <br>
+    <svg viewBox="5 20 75 60">
+      <g id="in1">
+        <line x1="20" y1="30" x2="50" y2="50" stroke="currentColor"
+          data-minwidth="0.5" data-maxwidth="2" />
+        <circle cx="20" cy="30" r="5" fill="currentColor" stroke="#555" stroke-width="0.4"
+          data-minradius="3" data-maxradius="4" />
+      </g>
+      <g id="in2" color="#e06666">
+        <line x1="20" y1="50" x2="50" y2="50" stroke="currentColor"
+          data-minwidth="0.5" data-maxwidth="2" />
+        <circle cx="20" cy="50" r="5" fill="currentColor" stroke="#555" stroke-width="0.4"
+          data-minradius="3" data-maxradius="4" />
+      </g>
+      <g id="in3" color="#e06666">
+        <line x1="20" y1="70" x2="50" y2="50" stroke="currentColor"
+          data-minwidth="0.5" data-maxwidth="2" />
+        <circle cx="20" cy="70" r="5" fill="currentColor" stroke="#555" stroke-width="0.4"
+          data-minradius="3" data-maxradius="4" />
+      </g>
+      <line x1="50" y1="50" x2="70" y2="50" id="out"
+        stroke="currentColor" stroke-linecap="round"
+        data-minwidth="0.5" data-maxwidth="2" data-limitboost="3" />
+      <circle cx="50" cy="50" r="10" fill="#ffd967" />
+      <g color="#e06666" stroke="#555" stroke-width="0.4">
+        <circle cx="41.6795" cy="44.453" r="2" id="w1" fill="currentColor"
+          data-minradius="1.5" data-maxradius="2.2" />
+        <circle cx="40" cy="50" r="2" id="w2" fill="currentColor"
+          data-minradius="1.5" data-maxradius="2.2" />
+        <circle cx="41.6795" cy="55.547" r="2" id="w3" fill="currentColor"
+          data-minradius="1.5" data-maxradius="2.2" />
+      </g>
+    </svg>
+  </body>
+</html>
