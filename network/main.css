@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+input {
+  width: 200px;
+}
+
+svg {
+  width: 100%;
+  max-width: 400px;
+  display: inline-block;
+}
+
+table {
+  display: inline-block;
+}
