@@ -18,8 +18,8 @@ for (var i = 1; i <= 3; ++i) {
 
 function handleLoad() {
   diagram = new window.Diagram(VAR_NAMES, getDiagramValue);
-  diagram.update();
   setupEditing();
+  randomize();
 }
 
 function zeroAll() {
