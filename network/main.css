@@ -16,3 +16,12 @@ svg {
 table {
   display: inline-block;
 }
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.highlighted {
+  stroke: #65bcd4;
+}

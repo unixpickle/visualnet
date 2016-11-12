@@ -10,8 +10,12 @@
 
   <body onload="handleLoad()">
     <button onclick="zeroAll()">Zero</button>
-    <br>
-    <svg viewBox="0 0 300 300">
+    <br><br>
+    <div id="edit-view" class="disabled">
+      <input id="edit-slider" type="range" min="-1" max="1" step="0.0001" />
+      <label id="edit-label">0.00</label>
+    </div>
+    <svg viewBox="0 50 285 200">
       <g id="in1">
         <line x1="20" y1="100" x2="90" y2="100" stroke="currentColor"
           data-minwidth="1" data-maxwidth="5" />
@@ -30,21 +34,21 @@
       </g>
 
       <line id="n1-out" x1="90" y1="100" x2="135" y2="100" stroke="currentColor"
-        data-minwidth="1" data-maxwidth="5" />
+        data-minwidth="1" data-maxwidth="5" data-limitboost="3" />
       <line id="a1-out" x1="135" y1="100" x2="200" y2="150" stroke="currentColor"
         data-minwidth="1" data-maxwidth="5" />
       <circle cx="90" cy="100" r="20" fill="#ffd967" />
       <circle cx="135" cy="100" r="10" fill="#aaa" />
 
       <line id="n2-out" x1="90" y1="200" x2="135" y2="200" stroke="currentColor"
-        data-minwidth="1" data-maxwidth="5" />
+        data-minwidth="1" data-maxwidth="5" data-limitboost="3" />
       <line id="a2-out" x1="135" y1="200" x2="200" y2="150" stroke="currentColor"
         data-minwidth="1" data-maxwidth="5" />
       <circle cx="90" cy="200" r="20" fill="#ffd967" />
       <circle cx="135" cy="200" r="10" fill="#aaa" />
 
       <line id="n3-out" x1="200" y1="150" x2="245" y2="150" stroke="currentColor"
-        data-minwidth="1" data-maxwidth="5" />
+        data-minwidth="1" data-maxwidth="5" data-limitboost="3" />
       <line id="a3-out" x1="245" y1="150" x2="270" y2="150" stroke="currentColor"
         data-minwidth="1" data-maxwidth="5" />
       <circle cx="200" cy="150" r="20" fill="#ffd967" />
