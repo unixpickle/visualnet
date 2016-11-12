@@ -23,9 +23,19 @@ function handleLoad() {
 }
 
 function zeroAll() {
+  window.stopEditingNode();
   for (var i = 0, len = VAR_NAMES.length; i < len; ++i) {
     variableValues[VAR_NAMES[i]] = 0;
   }
+  diagram.update();
+}
+
+function randomize() {
+  window.stopEditingNode();
+  for (var i = 0, len = VAR_NAMES.length; i < len; ++i) {
+    variableValues[VAR_NAMES[i]] = Math.max(-1, Math.min(1, Math.random()*3 - 1.5));
+  }
+  diagram.update();
 }
 
 function getDiagramValue(name) {
@@ -76,11 +86,16 @@ function setupEditing() {
       });
     })(document.getElementById(EDITABLE[i]));
   }
-  window.addEventListener('click', function() {
+  window.stopEditingNode = function() {
     if (curEditing) {
       highlightCircle(curEditing, false);
       curEditing = null;
       editView.className = 'disabled';
+    }
+  };
+  document.body.addEventListener('click', function(e) {
+    if (e.target === document.body || e.target.tagName === 'svg') {
+      window.stopEditingNode();
     }
   });
   editSlider.addEventListener('input', function() {
