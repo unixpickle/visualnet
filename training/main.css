@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+input {
+  width: 200px;
+}
+
+svg {
+  width: 100%;
+  max-width: 400px;
+  display: inline-block;
+}
+
+table {
+  display: inline-block;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.highlighted {
+  stroke: #65bcd4;
+}
